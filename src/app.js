@@ -17,8 +17,8 @@ class App  extends Component {
         {console.log(this.state.data)}
             <Cards data={this.state.data}/> 
            
-            <CountyPicker/>
-             <Charts/>
+             <CountyPicker/>
+             <Charts/> 
         </div>)
     }
 }
