@@ -10,7 +10,7 @@ const Chart = () =>{
          const fetchApi = async () => {
            setDailyData(await fecthDialyData())
          }
-        console.log(dailyData)
+        // console.log(dailyData)
          fetchApi();
         
     })
