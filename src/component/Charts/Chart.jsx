@@ -19,7 +19,7 @@ const Chart = (props) =>{
 
     const lineChart = (
         dailyData.length?
-        (<Bar 
+        (<Line 
           data={{
               labels:dailyData.map(({date})=> date),
               datasets:[{
@@ -28,14 +28,6 @@ const Chart = (props) =>{
                   borderColor:'#3333ff',
                   backgroundColor:'rgba(0,0,225,0.5)',
                   fill:true
-
-              },
-              {
-                data:dailyData.map(({recovered})=> recovered),
-                label:'recovered',
-                borderColor:'green',
-                backgroundColor:'rgba(0,225,0,0.5)',
-                fill:true
 
               },
               {
