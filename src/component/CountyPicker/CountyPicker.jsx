@@ -11,7 +11,7 @@ const CountyPicker = (props) => {
         }
         // console.log('countrycountry',country)
          countries()
-    })
+    },[])
     const countr= country.length?(
         country.map((count,i)=>(<option key= {i} value={count}> {count}</option>))
     ):null

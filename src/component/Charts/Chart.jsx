@@ -19,23 +19,34 @@ const Chart = (props) =>{
 
     const lineChart = (
         dailyData.length?
-        (<Line 
+        (<Bar 
           data={{
               labels:dailyData.map(({date})=> date),
               datasets:[{
                   data:dailyData.map(({confirmed})=> confirmed),
                   label:'infected',
                   borderColor:'#3333ff',
+                  backgroundColor:'rgba(0,0,225,0.5)',
                   fill:true
 
-              },{
+              },
+              {
+                data:dailyData.map(({recovered})=> recovered),
+                label:'recovered',
+                borderColor:'green',
+                backgroundColor:'rgba(0,225,0,0.5)',
+                fill:true
+
+              },
+              {
                 data:dailyData.map(({deaths})=> deaths),
                 label:'deaths',
                 borderColor:'red',
                 backgroundColor:'rgba(225,0,0,0.5)',
                 fill:true
 
-              }]
+              },
+            ]
           }}
         />
         ):null)
